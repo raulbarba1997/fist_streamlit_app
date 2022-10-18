@@ -27,9 +27,9 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 try:
    
-    fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+    fruit_choice = streamlit.text_input('What fruit would you like information about?')
     if not fruit_choice:
-        streamlit.error("Selecciona una fruta para recibir información)
+        streamlit.error("Selecciona una fruta para recibir información")
     else:
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" +"fruit_choice") 
 
